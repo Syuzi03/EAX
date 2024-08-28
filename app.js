@@ -26,7 +26,7 @@ app.post('/products', async (req, res) => {
 app.get('/products', async (req, res) => {
     try {
         await client.connect();
-        const db = client.db('eax1');
+        const db = client.db('syuzidb');
         const collection = db.collection('products');
         const result = await collection.find().toArray();
         res.send(result);
